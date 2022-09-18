@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Filters = () => (
-  <>
-        Filters
-  </>
+const Courses = () => (
+  <div>
+      Courses
+  </div>
 );
 
-export default Filters;
+export default Courses;

@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Courses = () => (
-  <>
-      Courses
-  </>
+const CurrentView = () => (
+  <div>
+      CurrentView
+  </div>
 );
 
-export default Courses;
+export default CurrentView;
