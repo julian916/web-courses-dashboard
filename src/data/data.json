@@ -46,7 +46,8 @@
             "description": "Fifth lecture for this course"
           }
         ]
-      }
+      },
+      "status": "NOT_STARTED"
     },
     {
       "name": "English for career development",
@@ -88,7 +89,8 @@
             "description": "Fourth lecture for this course"
           }
         ]
-      }
+      },
+      "status": "ACTIVE"
     },
     {
       "name": "First steps in Chinese",
@@ -131,7 +133,8 @@
             "description": "Fourth lecture for this course"
           }
         ]
-      }
+      },
+      "status": "COMPLETED"
     },
     {
       "name": "Learning in Spanish",
@@ -164,7 +167,8 @@
             "description": "Second lecture for this course"
           }
         ]
-      }
+      },
+      "status": "NOT_STARTED"
     }
   ]
 }
