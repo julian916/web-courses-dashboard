@@ -16,3 +16,9 @@ export const getCoursesCall = (searchValue, status, language) : Promise<any> => 
     resolve(courses);
   });
 };
+
+export const trimString = function (string, length) {
+  return string.length > length ?
+    string.substring(0, length) + '...' :
+    string;
+};
