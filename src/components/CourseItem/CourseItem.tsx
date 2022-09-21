@@ -34,7 +34,7 @@ const CourseItem = ({ data } : Props) => {
             <Rate {...rate} />
           </div>
           <LevelWrapper>
-            {level}
+            <Level level={level} />
           </LevelWrapper>
         </DetailsWrapper>
       </Content>
