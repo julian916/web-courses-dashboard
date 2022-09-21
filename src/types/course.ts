@@ -34,11 +34,19 @@ export enum StatusEnum {
     NOT_STARTED = 'NOT_STARTED'
 }
 
+export enum LevelEnum {
+    ALL = 'ALL',
+    BEGINNER = 'BEGINNER',
+    INTERMEDIATE = 'INTERMEDIATE',
+    ADVANCED = 'ADVANCED'
+}
+
 export type CourseType = {
+    id: number
     name: string
     description: string
     rate: RateType
-    level: string
+    level: LevelEnum
     language: LanguageEnum
     courseImageUrl: string
     introMediaUrl: string
