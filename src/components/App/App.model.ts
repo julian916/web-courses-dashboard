@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
-export const TitleWrapper = styled.h2``;
-
 export const LeftContainer = styled.div`
   background: #fafafa;
   overflow-y: auto;
+  width: 680px;
 `;
 
 export const RightWrapper = styled.div`
