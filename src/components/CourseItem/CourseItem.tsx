@@ -27,7 +27,7 @@ const CourseItem = ({ data } : Props) => {
       <Content>
         <Title>{name}</Title>
         <Description>
-          {trimString(description, 90)}
+          {trimString(description, 110)}
         </Description>
         <DetailsWrapper>
           <div>
