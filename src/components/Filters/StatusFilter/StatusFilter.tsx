@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { StatusEnum } from "../../../types/course";
 import styled from "styled-components";
 
@@ -22,18 +22,21 @@ const StatusFilter = ({ onChange, statusFilter } : Props) => {
   return (
     <>
       <StyledButton
+        id='all'
         onClick={() => handleStatusChange(null)}
         active={statusFilter === null}
       >
         All
       </StyledButton>
       <StyledButton
+        id='active'
         onClick={() => handleStatusChange(StatusEnum.ACTIVE)}
         active={statusFilter === StatusEnum.ACTIVE}
       >
         Active
       </StyledButton>
       <StyledButton
+        id='completed'
         onClick={() => handleStatusChange(StatusEnum.COMPLETED)}
         active={statusFilter === StatusEnum.COMPLETED}
       >
