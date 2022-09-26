@@ -12,29 +12,36 @@ type Props = {
 }
 
 const Filters = ({ onChange } : Props)  => {
-  const [textSearchValue, setTextSearchValue] = useState('');
+  const [filters, setFilters] = useState({ text: null, status: null, language: null });
   const [isSearchTextModalOpen, setIsSearchTextModalOpen]= useState(false);
-  const [statusFilter, setStatusFilter] = useState(null);
-  const [languageFilter, setLanguageFilter] = useState(null);
 
   const handleTextSearch = () => {
     setIsSearchTextModalOpen(true);
   };
 
   const handleOnSubmit = (value) => {
-    onChange({ text: value, status: statusFilter, language: languageFilter });
-    setTextSearchValue(value);
     setIsSearchTextModalOpen(false);
+    setFilters(prevState => {
+      const newFilters = { ...prevState, text: value };
+      onChange(newFilters);
+      return newFilters;
+    });
   };
 
-  const handleStatusFilterChange = (statusFilterNewValue) => {
-    setStatusFilter(statusFilterNewValue);
-    onChange({ text: textSearchValue, status: statusFilterNewValue, language: languageFilter });
+  const handleStatusFilterChange = (newStatus) => {
+    setFilters(prevState => {
+      const newFilters = { ...prevState, status: newStatus };
+      onChange(newFilters);
+      return newFilters;
+    });
   };
   
-  const handleLanguageFilterChange = (languageFilterNewValue) => {
-    setLanguageFilter(languageFilterNewValue);
-    onChange({ text: textSearchValue, status: statusFilter, language: languageFilterNewValue });
+  const handleLanguageFilterChange = (newLanguage) => {
+    setFilters(prevState => {
+      const newFilters = { ...prevState, language: newLanguage };
+      onChange(newFilters);
+      return newFilters;
+    });
   };
 
   return (
@@ -44,9 +51,8 @@ const Filters = ({ onChange } : Props)  => {
         <ButtonWrapper onClick={handleTextSearch}><img src={searchIcon} alt='search button'/></ButtonWrapper>
       </Header>
 
-      <StatusFilter onChange={handleStatusFilterChange} statusFilter={statusFilter}/>
+      <StatusFilter onChange={handleStatusFilterChange} statusFilter={filters.status}/>
       <LanguageFilter onChange={handleLanguageFilterChange} />
-      
 
       {isSearchTextModalOpen && (
         <ModalWithInput
