@@ -4,10 +4,11 @@ export type RateType = {
 }
 
 export enum LanguageEnum {
-    EN = 'EN',
-    ES = 'ES',
-    CH = 'CH',
-    FR = 'FR'
+    // Need <any> for being able to retrieve key from value
+    EN = <any>'English',
+    ES = <any>'Spanish',
+    CH = <any>'Chinese',
+    FR = <any>'French'
 }
 
 export type TeacherType = {

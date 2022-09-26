@@ -9,6 +9,10 @@ const StyledButton = styled.span`
   font-size: 20px;
 `;
 
+const Wrapper = styled.div`
+  margin-top: 15px;
+`;
+
 type Props = {
   onChange: (StatusEnum) => void,
   statusFilter: StatusEnum | null
@@ -20,7 +24,7 @@ const StatusFilter = ({ onChange, statusFilter } : Props) => {
   };
 
   return (
-    <>
+    <Wrapper>
       <StyledButton
         id='all'
         onClick={() => handleStatusChange(null)}
@@ -42,7 +46,7 @@ const StatusFilter = ({ onChange, statusFilter } : Props) => {
       >
         Completed
       </StyledButton>
-    </>
+    </Wrapper>
   );
 };
 

@@ -1,0 +1,8 @@
+<svg width="64" height="44" xmlns="http://www.w3.org/2000/svg" fill="none">
+    <g>
+        <title>Layer 1</title>
+        <path id="svg_1" fill="#1B75BB" d="m0,15l64,0l0,14l-64,0l0,-14z"/>
+        <path id="svg_2" fill="#E6E7E8" d="m54,0l-44,0c-6.627,0 -10,4.925 -10,11l0,4l64,0l0,-4c0,-6.075 -3.373,-11 -10,-11z"/>
+        <path id="svg_3" fill="#EC1C24" d="m0,33c0,6.075 3.373,11 10,11l44,0c6.627,0 10,-4.925 10,-11l0,-4l-64,0l0,4z"/>
+    </g>
+</svg>
