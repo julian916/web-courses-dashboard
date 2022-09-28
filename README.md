@@ -9,17 +9,25 @@
 - On course detail it will be displayed the preview Image of the course and the list of the content.
 - The list of content would redirect to another page. That page will not be done as there is no definition.
 
+## Roadmap 
+Here you can see the [Roadmap](https://github.com/julian916/web-courses-dashboard/wiki/Roadmap) of the steps followed and the state of each
+
 ## Design
 ![Dashboard](assets/dashboard.png)
 ------
 
-# Getting Started with Create React App
+# How to run this webapp
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Plus Typescript and ESLint.
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm install` (**Do this before running the webapp**)
+
+Download and install all node modules.
 
 ### `npm start`
 
@@ -33,7 +41,7 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.\
 
-### `npm run build`
+### `npm run build` (WORK IN PROGRESS)
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
