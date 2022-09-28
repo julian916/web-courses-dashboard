@@ -15,6 +15,9 @@ export const TitleWrapper = styled.h2`
 `;
 
 export const ButtonWrapper = styled.button`
+  height: 45px;
+  width: 45px;
+
   background: white;
   border: none;
   box-shadow: 1px 1px #d4d4d4;
@@ -30,4 +33,10 @@ export const ButtonWrapper = styled.button`
     opacity: 0.5;
     vertical-align: middle;
   }
+`;
+
+export const InlineWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;

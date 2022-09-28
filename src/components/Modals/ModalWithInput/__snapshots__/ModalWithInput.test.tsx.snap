@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ModalWithInput /> should render ModalWithInput 1`] = `
+"<ModalWithInput isOpen={true} onSubmit={[Function: mockConstructor] { _isMockFunction: true, getMockImplementation: [Function (anonymous)], mock: Object [Object: null prototype] { calls: [], instances: [], invocationCallOrder: [], results: [] }, mockClear: [Function (anonymous)], mockReset: [Function (anonymous)], mockRestore: [Function (anonymous)], mockReturnValueOnce: [Function (anonymous)], mockResolvedValueOnce: [Function (anonymous)], mockRejectedValueOnce: [Function (anonymous)], mockReturnValue: [Function (anonymous)], mockResolvedValue: [Function (anonymous)], mockRejectedValue: [Function (anonymous)], mockImplementationOnce: [Function (anonymous)], mockImplementation: [Function (anonymous)], mockReturnThis: [Function (anonymous)], mockName: [Function (anonymous)], getMockName: [Function (anonymous)] }} onClose={[Function: mockConstructor] { _isMockFunction: true, getMockImplementation: [Function (anonymous)], mock: Object [Object: null prototype] { calls: [], instances: [], invocationCallOrder: [], results: [] }, mockClear: [Function (anonymous)], mockReset: [Function (anonymous)], mockRestore: [Function (anonymous)], mockReturnValueOnce: [Function (anonymous)], mockResolvedValueOnce: [Function (anonymous)], mockRejectedValueOnce: [Function (anonymous)], mockReturnValue: [Function (anonymous)], mockResolvedValue: [Function (anonymous)], mockRejectedValue: [Function (anonymous)], mockImplementationOnce: [Function (anonymous)], mockImplementation: [Function (anonymous)], mockReturnThis: [Function (anonymous)], mockName: [Function (anonymous)], getMockName: [Function (anonymous)] }}>
+  <ModalComponent isOpen={true} onSubmit={[Function: handleOnSubmit]} onClose={[Function: mockConstructor] { _isMockFunction: true, getMockImplementation: [Function (anonymous)], mock: Object [Object: null prototype] { calls: [], instances: [], invocationCallOrder: [], results: [] }, mockClear: [Function (anonymous)], mockReset: [Function (anonymous)], mockRestore: [Function (anonymous)], mockReturnValueOnce: [Function (anonymous)], mockResolvedValueOnce: [Function (anonymous)], mockRejectedValueOnce: [Function (anonymous)], mockReturnValue: [Function (anonymous)], mockResolvedValue: [Function (anonymous)], mockRejectedValue: [Function (anonymous)], mockImplementationOnce: [Function (anonymous)], mockImplementation: [Function (anonymous)], mockReturnThis: [Function (anonymous)], mockName: [Function (anonymous)], getMockName: [Function (anonymous)] }} childElement={{...}} title=\\"Search for courses\\">
+    <Modal show={true} onHide={[Function: mockConstructor] { _isMockFunction: true, getMockImplementation: [Function (anonymous)], mock: Object [Object: null prototype] { calls: [], instances: [], invocationCallOrder: [], results: [] }, mockClear: [Function (anonymous)], mockReset: [Function (anonymous)], mockRestore: [Function (anonymous)], mockReturnValueOnce: [Function (anonymous)], mockResolvedValueOnce: [Function (anonymous)], mockRejectedValueOnce: [Function (anonymous)], mockReturnValue: [Function (anonymous)], mockResolvedValue: [Function (anonymous)], mockRejectedValue: [Function (anonymous)], mockImplementationOnce: [Function (anonymous)], mockImplementation: [Function (anonymous)], mockReturnThis: [Function (anonymous)], mockName: [Function (anonymous)], getMockName: [Function (anonymous)] }} centered={[undefined]} size={[undefined]} backdrop={true} keyboard={true} autoFocus={true} enforceFocus={true} restoreFocus={true} animation={true} dialogAs={{...}}>
+      <Modal show={true} backdrop={true} container={[undefined]} keyboard={true} autoFocus={true} enforceFocus={true} restoreFocus={true} restoreFocusOptions={[undefined]} onEscapeKeyDown={[Function: handleEscapeKeyDown]} onShow={[undefined]} onHide={[Function: mockConstructor] { _isMockFunction: true, getMockImplementation: [Function (anonymous)], mock: Object [Object: null prototype] { calls: [], instances: [], invocationCallOrder: [], results: [] }, mockClear: [Function (anonymous)], mockReset: [Function (anonymous)], mockRestore: [Function (anonymous)], mockReturnValueOnce: [Function (anonymous)], mockResolvedValueOnce: [Function (anonymous)], mockRejectedValueOnce: [Function (anonymous)], mockReturnValue: [Function (anonymous)], mockResolvedValue: [Function (anonymous)], mockRejectedValue: [Function (anonymous)], mockImplementationOnce: [Function (anonymous)], mockImplementation: [Function (anonymous)], mockReturnThis: [Function (anonymous)], mockName: [Function (anonymous)], getMockName: [Function (anonymous)] }} onEnter={[Function: handleEnter]} onEntering={[Function: handleEntering]} onEntered={[undefined]} onExit={[Function: handleExit]} onExiting={[undefined]} onExited={[Function: handleExited]} manager={{...}} transition={[Function: DialogTransition]} backdropTransition={[Function: BackdropTransition]} renderBackdrop={[Function (anonymous)]} renderDialog={[Function: renderDialog]}>
+        <Portal containerInfo={{...}}>
+          <BackdropTransition appear={true} in={true}>
+            <Fade appear={true} in={true} timeout={{...}} mountOnEnter={false} unmountOnExit={false}>
+              <ForwardRef addEndListener={[Function: transitionEndListener]} appear={true} in={true} timeout={{...}} mountOnEnter={false} unmountOnExit={false} onEnter={[Function (anonymous)]} childRef={[Function (anonymous)]}>
+                <Transition appear={true} in={true} timeout={{...}} mountOnEnter={false} unmountOnExit={false} onEnter={[Function (anonymous)]} onEntered={[Function (anonymous)]} onEntering={[Function (anonymous)]} onExit={[Function (anonymous)]} onExited={[Function (anonymous)]} onExiting={[Function (anonymous)]} addEndListener={[Function (anonymous)]} nodeRef={{...}} enter={true} exit={true}>
+                  <div onClick={[Function (anonymous)]} className=\\"fade modal-backdrop show\\" />
+                </Transition>
+              </ForwardRef>
+            </Fade>
+          </BackdropTransition>
+          <DialogTransition appear={true} unmountOnExit={true} in={true} onExit={[Function: handleExit]} onExiting={[undefined]} onExited={[Function: handleHidden]} onEnter={[Function: handleEnter]} onEntering={[Function: handleEntering]} onEntered={[undefined]}>
+            <Fade appear={true} unmountOnExit={true} in={true} onExit={[Function: handleExit]} onExiting={[undefined]} onExited={[Function: handleHidden]} onEnter={[Function: handleEnter]} onEntering={[Function: handleEntering]} onEntered={[undefined]} timeout={{...}} mountOnEnter={false}>
+              <ForwardRef addEndListener={[Function: transitionEndListener]} appear={true} unmountOnExit={true} in={true} onExit={[Function: handleExit]} onExiting={[undefined]} onExited={[Function: handleHidden]} onEnter={[Function (anonymous)]} onEntering={[Function: handleEntering]} onEntered={[undefined]} timeout={{...}} mountOnEnter={false} childRef={[Function (anonymous)]}>
+                <Transition appear={true} unmountOnExit={true} in={true} timeout={{...}} mountOnEnter={false} onEnter={[Function (anonymous)]} onEntered={[Function (anonymous)]} onEntering={[Function (anonymous)]} onExit={[Function (anonymous)]} onExited={[Function (anonymous)]} onExiting={[Function (anonymous)]} addEndListener={[Function (anonymous)]} nodeRef={{...}} enter={true} exit={true}>
+                  <div role=\\"dialog\\" aria-modal={true} style={{...}} className=\\"fade modal show\\" tabIndex={-1} onClick={[Function: handleClick]} onMouseUp={[Function: handleMouseUp]} aria-label={[undefined]} aria-labelledby={[undefined]} aria-describedby={[undefined]}>
+                    <ModalDialog centered={[undefined]} size={[undefined]} onMouseDown={[Function: handleDialogMouseDown]} className={[undefined]} contentClassName={[undefined]}>
+                      <div onMouseDown={[Function: handleDialogMouseDown]} className=\\"modal-dialog\\">
+                        <div className=\\"modal-content\\">
+                          <ModalHeader closeButton={true} closeLabel=\\"Close\\">
+                            <ForwardRef closeButton={true} closeLabel=\\"Close\\" className=\\"modal-header\\">
+                              <div className=\\"modal-header\\">
+                                <ModalTitle>
+                                  <ForwardRef className=\\"modal-title\\">
+                                    <div className=\\"modal-title h4\\">
+                                      Search for courses
+                                    </div>
+                                  </ForwardRef>
+                                </ModalTitle>
+                                <CloseButton aria-label=\\"Close\\" variant={[undefined]} onClick={[Function (anonymous)]}>
+                                  <button type=\\"button\\" className=\\"btn-close\\" aria-label=\\"Close\\" onClick={[Function (anonymous)]} />
+                                </CloseButton>
+                              </div>
+                            </ForwardRef>
+                          </ModalHeader>
+                          <ModalBody>
+                            <div className=\\"modal-body\\">
+                              <FormControl type=\\"text\\" placeholder=\\"Enter course name\\" value=\\"\\" onChange={[Function: handleInputChange]}>
+                                <input placeholder=\\"Enter course name\\" value=\\"\\" onChange={[Function: handleInputChange]} type=\\"text\\" size={[undefined]} readOnly={[undefined]} id={[undefined]} className=\\"form-control\\" />
+                              </FormControl>
+                            </div>
+                          </ModalBody>
+                          <ModalFooter>
+                            <div className=\\"modal-footer\\">
+                              <Button variant=\\"secondary\\" id=\\"close\\" onClick={[Function: mockConstructor] { _isMockFunction: true, getMockImplementation: [Function (anonymous)], mock: Object [Object: null prototype] { calls: [], instances: [], invocationCallOrder: [], results: [] }, mockClear: [Function (anonymous)], mockReset: [Function (anonymous)], mockRestore: [Function (anonymous)], mockReturnValueOnce: [Function (anonymous)], mockResolvedValueOnce: [Function (anonymous)], mockRejectedValueOnce: [Function (anonymous)], mockReturnValue: [Function (anonymous)], mockResolvedValue: [Function (anonymous)], mockRejectedValue: [Function (anonymous)], mockImplementationOnce: [Function (anonymous)], mockImplementation: [Function (anonymous)], mockReturnThis: [Function (anonymous)], mockName: [Function (anonymous)], getMockName: [Function (anonymous)] }} active={false} disabled={false}>
+                                <button type=\\"button\\" disabled={false} id=\\"close\\" onClick={[Function: mockConstructor] { _isMockFunction: true, getMockImplementation: [Function (anonymous)], mock: Object [Object: null prototype] { calls: [], instances: [], invocationCallOrder: [], results: [] }, mockClear: [Function (anonymous)], mockReset: [Function (anonymous)], mockRestore: [Function (anonymous)], mockReturnValueOnce: [Function (anonymous)], mockResolvedValueOnce: [Function (anonymous)], mockRejectedValueOnce: [Function (anonymous)], mockReturnValue: [Function (anonymous)], mockResolvedValue: [Function (anonymous)], mockRejectedValue: [Function (anonymous)], mockImplementationOnce: [Function (anonymous)], mockImplementation: [Function (anonymous)], mockReturnThis: [Function (anonymous)], mockName: [Function (anonymous)], getMockName: [Function (anonymous)] }} className=\\"btn btn-secondary\\">
+                                  Cancel
+                                </button>
+                              </Button>
+                              <Button variant=\\"primary\\" id=\\"submit\\" onClick={[Function: handleOnSubmit]} active={false} disabled={false}>
+                                <button type=\\"button\\" disabled={false} id=\\"submit\\" onClick={[Function: handleOnSubmit]} className=\\"btn btn-primary\\">
+                                  Submit
+                                </button>
+                              </Button>
+                            </div>
+                          </ModalFooter>
+                        </div>
+                      </div>
+                    </ModalDialog>
+                  </div>
+                </Transition>
+              </ForwardRef>
+            </Fade>
+          </DialogTransition>
+        </Portal>
+      </Modal>
+    </Modal>
+  </ModalComponent>
+</ModalWithInput>"
+`;
