@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import ModalWithInput from "./Modal";
-import Form from "react-bootstrap/Form";
+import ModalWithInput from './ModalWithInput';
+import Form from 'react-bootstrap/Form';
 
 describe('<ModalWithInput />', () => {
   const onSubmit = jest.fn();
@@ -26,6 +26,6 @@ describe('<ModalWithInput />', () => {
     wrapper.find('input').simulate('change', { target: { value: EXPECTED_INPUT } });
     wrapper.find('#submit button').simulate('click');
 
-    expect(onSubmit).toHaveBeenCalledWith(EXPECTED_INPUT);
+    expect(onSubmit).toHaveBeenCalledWith({ text: EXPECTED_INPUT });
   });
 });

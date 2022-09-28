@@ -4,26 +4,18 @@ import CourseList from "../CourseList/CourseList";
 import CurrentView from "../CurrentView/CurrentView";
 import { getCourses } from "../../api/getCourses";
 import { CourseType } from "../../types/course";
-import { FilterType } from "../../types/filter";
 import { LeftContainer, RightWrapper, Wrapper } from './App.model';
 
 const App = () => {
-  const [filters, setFilters] = useState<FilterType>({ text: undefined, status: undefined, language: undefined });
   const [courses, setCourses] = useState<Array<CourseType>>([]);
 
-  const getCoursesFilteredBy = (filters: FilterType) => {
-    getCourses(filters).then((data) => {
-      setCourses(data);
-    });
-  };
-
   useEffect(() => {
-    getCoursesFilteredBy(filters);
+    const defaultFilters = { text: null, status: null, language: null };
+    getCourses(defaultFilters).then((data) => setCourses(data));
   }, []);
 
   const handleFilterChange = (newFilters) => {
-    getCoursesFilteredBy(newFilters);
-    setFilters(newFilters);
+    getCourses(newFilters).then((data) => setCourses(data));
   };
 
   return (

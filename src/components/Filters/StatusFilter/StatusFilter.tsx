@@ -1,6 +1,6 @@
 import React from 'react';
-import { StatusEnum } from "../../../types/course";
-import styled from "styled-components";
+import { StatusEnum } from '../../../types/course';
+import styled from 'styled-components';
 
 const StyledButton = styled.span`
   cursor: pointer;
@@ -11,16 +11,17 @@ const StyledButton = styled.span`
 
 const Wrapper = styled.div`
   margin-top: 15px;
+  margin-bottom: 15px;
 `;
 
 type Props = {
-  onChange: (StatusEnum) => void,
+  onChange: (FiltersType) => void,
   statusFilter: StatusEnum | null
 }
 
 const StatusFilter = ({ onChange, statusFilter } : Props) => {
   const handleStatusChange = (newValue) => {
-    onChange(newValue);
+    onChange({ status: newValue });
   };
 
   return (

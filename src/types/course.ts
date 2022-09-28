@@ -4,12 +4,16 @@ export type RateType = {
 }
 
 export enum LanguageEnum {
-    // Need <any> for being able to retrieve key from value
-    EN = <any>'English',
-    ES = <any>'Spanish',
-    CH = <any>'Chinese',
-    FR = <any>'French'
+    EN = 'English',
+    ES = 'Spanish',
+    CH = 'Chinese',
+    FR = 'French',
+    PR = 'Portuguese',
+    RU = 'Russian'
 }
+
+// ex: ['EN', 'ES', 'CH', 'FR', ...]
+export const AvailableLanguage = Object.keys(LanguageEnum);
 
 export type TeacherType = {
     name: string

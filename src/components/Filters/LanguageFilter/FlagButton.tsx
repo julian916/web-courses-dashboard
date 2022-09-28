@@ -1,12 +1,13 @@
 import React from 'react';
 
-import { LanguageEnum } from "../../../types/course";
-import styled from "styled-components";
+import { LanguageEnum } from '../../../types/course';
+import styled from 'styled-components';
 
 type Props = {
-  lang: LanguageEnum,
-  onClick: (LanguageEnum) => void
-  active: boolean
+  lang: string,
+  onClick: (LanguageEnum) => void,
+  active: boolean,
+  id?: string
 }
 
 const StyledButton = styled.button`
@@ -33,16 +34,13 @@ const StyledSpan = styled.span`
   font-size: 15px;
 `;
 
-const FlagButton = ({ lang, onClick, active } : Props) => {
-
-  return (
-    <StyledButton onClick={() => onClick(lang)} active={active}>
-      <StyledIcon src={`flags/flag-${LanguageEnum[lang]}.svg`} alt={lang}/>
-      <StyledSpan>
-        {lang}
-      </StyledSpan>
-    </StyledButton>
-  );
-};
+const FlagButton = ({ lang, onClick, active } : Props) => (
+  <StyledButton onClick={() => onClick(lang)} active={active}>
+    <StyledIcon src={`flags/flag-${lang}.svg`} alt={LanguageEnum[lang]}/>
+    <StyledSpan>
+      {LanguageEnum[lang]}
+    </StyledSpan>
+  </StyledButton>
+);
 
 export default FlagButton;

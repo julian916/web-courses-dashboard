@@ -1,14 +1,15 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import LanguageFilter from "./LanguageFilter";
-import FlagButton from "./FlagButton";
-import { LanguageEnum } from "../../../types/course";
+import LanguageFilter from './LanguageFilter';
+import FlagButton from './FlagButton';
+
+const ES_LANGUAGE = 'EN';
 
 describe('<LanguageFilter />', () => {
-  const onChange = jest.fn();
-  const wrapper = mount(<LanguageFilter onChange={onChange} />);
-
   it('should render correctly initial state', () => {
+    const onChange = jest.fn();
+    const wrapper = mount(<LanguageFilter onChange={onChange} />);
+
     expect(wrapper).toMatchSnapshot();
 
     const buttons = wrapper.find(FlagButton);
@@ -17,17 +18,22 @@ describe('<LanguageFilter />', () => {
     });
   });
 
-  it('should show active first FlagButton after click', () => {
-    const firstButton = wrapper.find(FlagButton).at(0);
-    firstButton.simulate('click');
-    wrapper.update();
+  it('should call onChange correctly', function () {
+    const onChange = jest.fn();
+    const wrapper = mount(<LanguageFilter onChange={onChange} />);
+    
+    wrapper.find('#EN').simulate('click');
+    
+    expect(onChange).toHaveBeenCalledWith({ language: ES_LANGUAGE });
+  });
+
+  it('should show active flag for lang=EN item', () => {
+    const onChange = jest.fn();
+    const wrapper = mount(<LanguageFilter onChange={onChange} language={ES_LANGUAGE} />);
 
     // Validate to have active only in clicked button
-    expect(wrapper.find(FlagButton).at(0).props().active).toBe(true);
-    expect(wrapper.find(FlagButton).at(1).props().active).toBe(false);
-
-    // Validate that onChange was called with key value of enum
-    expect(onChange).toHaveBeenCalledWith(LanguageEnum[firstButton.props().lang]);
+    expect(wrapper.find('#EN').props().active).toBe(true);
+    expect(wrapper.find('#ES').props().active).toBe(false);
   });
 
 });

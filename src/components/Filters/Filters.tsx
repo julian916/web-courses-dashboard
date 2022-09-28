@@ -1,58 +1,55 @@
 import React, { useState } from 'react';
-import { ButtonWrapper, TitleWrapper, Header, Wrapper } from './Filters.model';
-
+import { ButtonWrapper, Header, InlineWrapper, TitleWrapper, Wrapper } from './Filters.model';
 import searchIcon from './icons/search.svg';
-
-import ModalWithInput from "./Modal/Modal";
-import StatusFilter from "./StatusFilter/StatusFilter";
-import LanguageFilter from "./LanguageFilter/LanguageFilter";
+import StatusFilter from './StatusFilter/StatusFilter';
+import LanguageFilter from './LanguageFilter/LanguageFilter';
+import FilterManager from './FilterManager/FilterManager';
+import ModalWithInput from '../Modals/ModalWithInput/ModalWithInput';
 
 type Props = {
   onChange: (FilterType) => void
 }
 
 const Filters = ({ onChange } : Props)  => {
-  const [textSearchValue, setTextSearchValue] = useState('');
+  const [filters, setFilters] = useState({ text: null, status: null, language: null });
   const [isSearchTextModalOpen, setIsSearchTextModalOpen]= useState(false);
-  const [statusFilter, setStatusFilter] = useState(null);
-  const [languageFilter, setLanguageFilter] = useState(null);
 
-  const handleTextSearch = () => {
-    setIsSearchTextModalOpen(true);
-  };
+  const openTextSearchModal = () => setIsSearchTextModalOpen(true);
+  const handleModalClose = () => setIsSearchTextModalOpen(false);
 
-  const handleOnSubmit = (value) => {
-    onChange({ text: value, status: statusFilter, language: languageFilter });
-    setTextSearchValue(value);
-    setIsSearchTextModalOpen(false);
+  const handleSearchTextModalSubmit = (newValue) => {
+    handleModalClose();
+    handleFiltersChange(newValue);
   };
 
-  const handleStatusFilterChange = (statusFilterNewValue) => {
-    setStatusFilter(statusFilterNewValue);
-    onChange({ text: textSearchValue, status: statusFilterNewValue, language: languageFilter });
+  const handleFiltersChange = (newFilters) => {
+    setFilters(prevState => {
+      const stateComposed = { ...prevState, ...newFilters };
+      onChange(stateComposed);
+      return stateComposed;
+    });
   };
-  
-  const handleLanguageFilterChange = (languageFilterNewValue) => {
-    setLanguageFilter(languageFilterNewValue);
-    onChange({ text: textSearchValue, status: statusFilter, language: languageFilterNewValue });
-  };
+
 
   return (
     <Wrapper>
       <Header>
         <TitleWrapper>Courses</TitleWrapper>
-        <ButtonWrapper onClick={handleTextSearch}><img src={searchIcon} alt='search button'/></ButtonWrapper>
+        <ButtonWrapper onClick={openTextSearchModal}><img src={searchIcon} alt='search button'/></ButtonWrapper>
       </Header>
 
-      <StatusFilter onChange={handleStatusFilterChange} statusFilter={statusFilter}/>
-      <LanguageFilter onChange={handleLanguageFilterChange} />
-      
+      <StatusFilter onChange={handleFiltersChange} statusFilter={filters.status}/>
+      <InlineWrapper>
+        <LanguageFilter onChange={handleFiltersChange} language={filters.language}/>
+        <FilterManager filters={filters} onChange={handleFiltersChange}/>
+      </InlineWrapper>
 
       {isSearchTextModalOpen && (
         <ModalWithInput
           isOpen={isSearchTextModalOpen}
-          onClose={() => setIsSearchTextModalOpen(false)}
-          onSubmit={handleOnSubmit}
+          onClose={handleModalClose}
+          onSubmit={handleSearchTextModalSubmit}
+          lastInputValue={filters.text}
         />
       )}
 
