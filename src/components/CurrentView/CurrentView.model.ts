@@ -10,7 +10,7 @@ export const StyledImage = styled.div`
   }
 `;
 
-export const Content = styled.div`
+export const Container = styled.div`
   margin-top: 20px;
   max-width: 600px;
 `;
@@ -18,6 +18,7 @@ export const Content = styled.div`
 export const InlineWrapper = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
 `;
 
 export const TitleWrapper = styled.h3`
@@ -25,7 +26,14 @@ export const TitleWrapper = styled.h3`
   font-weight: 600;
 `;
 
-export const DescriptionWrapper = styled.p`
+export const StyledText = styled.p`
   font-size: 15px;
   color: #757575;
+`;
+
+export const CourseContent = styled.div`
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 `;

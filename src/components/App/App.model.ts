@@ -12,6 +12,7 @@ export const RightWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   flex: 1 1 100%;
+  overflow-y: auto;
 `;
 
 export const Wrapper = styled.div`
