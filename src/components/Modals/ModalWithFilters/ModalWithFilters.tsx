@@ -18,6 +18,7 @@ const InlineWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 20px 0px;
+  flex-wrap: wrap;
 `;
 
 const ModalWithFilters = ({ isOpen, onClose, onSubmit, filters } : Props) => {

@@ -50,6 +50,7 @@ export type CourseType = {
     id: number
     name: string
     description: string
+    fullDescription: string
     rate: RateType
     level: LevelEnum
     language: LanguageEnum

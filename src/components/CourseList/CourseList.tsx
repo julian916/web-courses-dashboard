@@ -1,10 +1,11 @@
 import React from 'react';
-import { CourseType } from "../../types/course";
-import CourseItem from "../CourseItem/CourseItem";
-import styled from "styled-components";
+import { CourseType } from '../../types/course';
+import CourseItem from '../CourseItem/CourseItem';
+import styled from 'styled-components';
 
 type Props = {
-  data: Array<CourseType>
+  data: Array<CourseType>,
+  selectCourse: (CourseType) => void
 }
 
 const CourseListWrapper = styled.div`
@@ -12,11 +13,11 @@ const CourseListWrapper = styled.div`
   flex-direction: column;
 `;
 
-const CourseList = ({ data } : Props) => (
+const CourseList = ({ data, selectCourse } : Props) => (
   <CourseListWrapper>
     {data.map((course) => {
       return (
-        <CourseItem key={course.id} data={course} />
+        <CourseItem key={course.id} data={course} onClick={selectCourse}/>
       );
     })}
   </CourseListWrapper>
