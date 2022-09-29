@@ -8,6 +8,7 @@ import { LeftContainer, RightWrapper, Wrapper } from './App.model';
 
 const App = () => {
   const [courses, setCourses] = useState<Array<CourseType>>([]);
+  const [selectedCourse, setSelectedCourse] = useState<CourseType>();
 
   useEffect(() => {
     const defaultFilters = { text: null, status: null, language: null };
@@ -18,14 +19,18 @@ const App = () => {
     getCourses(newFilters).then((data) => setCourses(data));
   };
 
+  const handleSelectCourse = (course) => {
+    setSelectedCourse(course);
+  };
+
   return (
     <Wrapper>
       <LeftContainer>
         <Filters onChange={handleFilterChange}/>
-        <CourseList data={courses}/>
+        <CourseList data={courses} selectCourse={handleSelectCourse}/>
       </LeftContainer>
       <RightWrapper>
-        <CurrentView/>
+        <CurrentView data={selectedCourse}/>
       </RightWrapper>
     </Wrapper>
   );

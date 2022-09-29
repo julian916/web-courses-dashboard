@@ -17,6 +17,7 @@ export const CourseItemWrapper = styled.div`
   align-items: flex-start;
   border: none;
   box-shadow: 2px 2px #d4d4d4;
+  cursor: pointer;
 `;
 
 export const Title = styled.h5`

@@ -1,28 +1,30 @@
 import React from 'react';
 
-import { CourseType } from "../../types/course";
+import { CourseType } from '../../types/course';
 
-import { trimString } from "../../api/utils/utils";
+import { trimString } from '../../api/utils/utils';
 import {
   Content,
   CourseItemWrapper,
-  DetailsWrapper,
   Description,
+  DetailsWrapper,
+  LevelWrapper,
   StyledImage,
-  Title,
-  LevelWrapper
+  Title
 } from './CourseItem.model';
-import Rate from "../Rate/Rate";
-import Level from "../Level/Level";
+import Rate from '../Rate/Rate';
+import Level from '../Level/Level';
 
 type Props = {
-  data: CourseType
+  data: CourseType,
+  onClick: (CourseType) => void
 }
 
-const CourseItem = ({ data } : Props) => {
+
+const CourseItem = ({ data, onClick } : Props) => {
   const { name, courseImageUrl, description, rate, level } = data;
   return (
-    <CourseItemWrapper>
+    <CourseItemWrapper onClick={() => onClick(data)}>
       <StyledImage src={courseImageUrl} alt='courseImage'/>
       <Content>
         <Title>{name}</Title>
