@@ -20,7 +20,7 @@
       },
       "content": {
         "lecturesAmount": 5,
-        "lecturesMinutes": 60,
+        "lecturesHours": 2,
         "lectures": [
           {
             "name": "Intro",
@@ -71,7 +71,7 @@
       },
       "content": {
         "lecturesAmount": 4,
-        "lecturesMinutes": 50,
+        "lecturesHours": 1,
         "lectures": [
           {
             "name": "Intro",
@@ -117,7 +117,7 @@
       },
       "content": {
         "lecturesAmount": 4,
-        "lecturesMinutes": 50,
+        "lecturesHours": 1,
         "lectures": [
           {
             "name": "Intro",
@@ -163,7 +163,7 @@
       },
       "content": {
         "lecturesAmount": 2,
-        "lecturesMinutes": 99,
+        "lecturesHours": 3,
         "lectures": [
           {
             "name": "Intro",
@@ -199,7 +199,7 @@
       },
       "content": {
         "lecturesAmount": 2,
-        "lecturesMinutes": 99,
+        "lecturesHours": 4,
         "lectures": [
           {
             "name": "Intro",
@@ -235,7 +235,7 @@
       },
       "content": {
         "lecturesAmount": 2,
-        "lecturesMinutes": 99,
+        "lecturesHours": 2,
         "lectures": [
           {
             "name": "Intro",
@@ -271,7 +271,7 @@
       },
       "content": {
         "lecturesAmount": 2,
-        "lecturesMinutes": 99,
+        "lecturesHours": 5,
         "lectures": [
           {
             "name": "Intro",

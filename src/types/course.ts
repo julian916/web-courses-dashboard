@@ -29,7 +29,7 @@ export type LectureType = {
 
 export type ContentType = {
     lecturesAmount: number
-    lecturesMinutes: number
+    lecturesHours: number
     lectures: Array<LectureType>
 }
 
