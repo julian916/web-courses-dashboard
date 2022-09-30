@@ -2,7 +2,7 @@ import mock from '../../data/data.json';
 
 // Simulate fetch to backend and filter data manually
 export const getCoursesCall = (searchValue, status, language) : Promise<any> => {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     let courses = mock.data;
     if(searchValue) {
       courses = courses.filter(course => course.name.toLowerCase().includes(searchValue.toLowerCase()));
