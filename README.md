@@ -41,7 +41,8 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.\
 
-### `npm run build` (WORK IN PROGRESS)
+### `npm run build` (For creating the build files)
+### `npx serve -s build` (For running local server with build)
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
