@@ -10,7 +10,7 @@ type Props = {
   id?: string
 }
 
-const StyledButton = styled.button`
+const StyledButton = styled.button<{ active: boolean }>`
   color: #000;
   background: transparent;
   padding: 8px 10px;
