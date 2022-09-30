@@ -57,4 +57,4 @@ const Filters = ({ onChange } : Props)  => {
   );
 };
 
-export default Filters;
+export default React.memo(Filters);

@@ -16,15 +16,15 @@ import Rate from '../Rate/Rate';
 import Level from '../Level/Level';
 
 type Props = {
-  data: CourseType,
+  course: CourseType,
   onClick: (CourseType) => void
 }
 
 
-const CourseItem = ({ data, onClick } : Props) => {
-  const { name, courseImageUrl, description, rate, level } = data;
+const CourseItem = ({ course, onClick } : Props) => {
+  const { name, courseImageUrl, description, rate, level } = course;
   return (
-    <CourseItemWrapper onClick={() => onClick(data)}>
+    <CourseItemWrapper onClick={() => onClick(course)}>
       <StyledImage src={courseImageUrl} alt='courseImage'/>
       <Content>
         <Title>{name}</Title>

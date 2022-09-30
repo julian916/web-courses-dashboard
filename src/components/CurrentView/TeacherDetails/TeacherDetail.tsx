@@ -3,10 +3,10 @@ import { TeacherType } from '../../../types/course';
 import { DetailWrappers, IconImage, NameWrapper, TitleWrapper, Wrapper } from './TeacherDetail.model';
 
 type Props = {
-  data: TeacherType
+  teacher: TeacherType
 };
 
-const TeacherDetail = ({ data: { name, title, profileImageUrl } } : Props) => {
+const TeacherDetail = ({ teacher: { name, title, profileImageUrl } } : Props) => {
   return (
     <Wrapper>
       <IconImage src={profileImageUrl} alt={name} />
