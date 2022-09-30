@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { ButtonWrapper, Header, InlineWrapper, TitleWrapper, Wrapper } from './Filters.model';
-import searchIcon from './icons/search.svg';
 import StatusFilter from './StatusFilter/StatusFilter';
 import LanguageFilter from './LanguageFilter/LanguageFilter';
 import FilterManager from './FilterManager/FilterManager';
@@ -35,7 +34,7 @@ const Filters = ({ onChange } : Props)  => {
     <Wrapper>
       <Header>
         <TitleWrapper>Courses</TitleWrapper>
-        <ButtonWrapper onClick={openTextSearchModal}><img src={searchIcon} alt='search button'/></ButtonWrapper>
+        <ButtonWrapper onClick={openTextSearchModal}><img src={'icons/icon-search.svg'} alt='search button'/></ButtonWrapper>
       </Header>
 
       <StatusFilter onChange={handleFiltersChange} statusFilter={filters.status}/>
@@ -57,4 +56,4 @@ const Filters = ({ onChange } : Props)  => {
   );
 };
 
-export default Filters;
+export default React.memo(Filters);

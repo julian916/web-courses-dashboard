@@ -4,15 +4,15 @@ import { LectureType } from "../../types/course";
 import { LectureDetail, PreviewIcon, StyledPlayButton, Wrapper } from './Lectures.model';
 
 type Props = {
-  data: Array<LectureType>
+  lectures: Array<LectureType>
 }
 
 const sanitizeTime = (seconds) => `${Math.floor(seconds / 60)}:${seconds % 60}mins`;
 
-const Lectures = ({ data } : Props) => {
+const Lectures = ({ lectures } : Props) => {
   return (
     <div>
-      {data.map(({ name, durationInSeconds, description }, index) => (
+      {lectures.map(({ name, durationInSeconds, description }, index) => (
         <Wrapper key={index}>
           <PreviewIcon itemNumber={index}>•••</PreviewIcon>
           <LectureDetail>

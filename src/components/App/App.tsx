@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import Filters from "../Filters/Filters";
 import CourseList from "../CourseList/CourseList";
 import CurrentView from "../CurrentView/CurrentView";
@@ -15,22 +15,22 @@ const App = () => {
     getCourses(defaultFilters).then((data) => setCourses(data));
   }, []);
 
-  const handleFilterChange = (newFilters) => {
+  const handleFilterChange = useCallback((newFilters) => {
     getCourses(newFilters).then((data) => setCourses(data));
-  };
+  }, []);
 
-  const handleSelectCourse = (course) => {
+  const handleSelectCourse = useCallback((course) => {
     setSelectedCourse(course);
-  };
+  }, []);
 
   return (
     <Wrapper>
       <LeftContainer>
         <Filters onChange={handleFilterChange}/>
-        <CourseList data={courses} selectCourse={handleSelectCourse}/>
+        <CourseList courses={courses} selectCourse={handleSelectCourse}/>
       </LeftContainer>
       <RightWrapper>
-        <CurrentView data={selectedCourse}/>
+        <CurrentView selectedCourse={selectedCourse}/>
       </RightWrapper>
     </Wrapper>
   );

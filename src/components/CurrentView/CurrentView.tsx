@@ -7,15 +7,15 @@ import { Container, CourseContent, StyledText, InlineWrapper, StyledImage, Title
 import Lectures from '../Lectures/Lectures';
 
 type Props = {
-  data?: CourseType
+  selectedCourse?: CourseType
 }
 
-const CurrentView = ({ data } : Props) => {
-  if(!data) {
+const CurrentView = ({ selectedCourse } : Props) => {
+  if(!selectedCourse) {
     return null;
   }
 
-  const { introMediaUrl, rate, level, name, fullDescription, teacher, content } = data;
+  const { introMediaUrl, rate, level, name, fullDescription, teacher, content } = selectedCourse;
   return (
     <Wrapper>
       <StyledImage>
@@ -34,17 +34,17 @@ const CurrentView = ({ data } : Props) => {
         <StyledText>
           {fullDescription}
         </StyledText>
-        <TeacherDetail data={teacher}/>
+        <TeacherDetail teacher={teacher}/>
         <CourseContent>
           <InlineWrapper>
             <h5><strong>Course`s Content</strong></h5>
             <StyledText>{content.lecturesAmount} lectures • {content.lecturesHours} hours</StyledText>
           </InlineWrapper>
-          <Lectures data={content.lectures} />
+          <Lectures lectures={content.lectures} />
         </CourseContent>
       </Container>
     </Wrapper>
   );
 };
 
-export default CurrentView;
+export default React.memo(CurrentView);

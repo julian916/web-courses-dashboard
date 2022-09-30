@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { FilterType } from '../../../types/filter';
-import filterIcon from '../icons/filter.png';
 import { ButtonWrapper } from "../Filters.model";
 import ModalWithFilters from "../../Modals/ModalWithFilters/ModalWithFilters";
 
@@ -20,11 +19,11 @@ const FilterManager = ({ filters, onChange } : Props) => {
     setIsManagerModalOpen(false);
     onChange(filters);
   };
-  
+
   return (
     <>
       <ButtonWrapper onClick={openFiltersModal}>
-        <img src={filterIcon} alt='Filter Icon' height='30px' width='30px' />
+        <img src={'icons/icon-filter.png'} alt='Filter Icon' height='30px' width='30px' />
       </ButtonWrapper>
 
       {isManagerModalOpen && (

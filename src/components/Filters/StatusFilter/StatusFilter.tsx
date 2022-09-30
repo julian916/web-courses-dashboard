@@ -2,7 +2,7 @@ import React from 'react';
 import { StatusEnum } from '../../../types/course';
 import styled from 'styled-components';
 
-const StyledButton = styled.span`
+const StyledButton = styled.span<{ active: boolean }>`
   cursor: pointer;
   color: ${(props) => props.active ? '#000' : '#b9b8b8'};
   margin-right: 25px;
