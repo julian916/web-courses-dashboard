@@ -1,19 +1,23 @@
+# Dashboard Challenge
+The idea is to develop a dashboard from a design, while using good practices like adding unit testing. With ReactJs + Typescript
+
+## Design
+![Dashboard](assets/dashboard.png)
+
 # Notes or Concerns
 
-- I think of the dashboard as a module that will be consumed from a bigger web-app. Because of that, I will not be doing the part of the sidebar with routing to different pages.
-- Commonly I would have a Figma design (or a design in some similar platform) where I could get the exact colours, fonts and size for the design, so I could keep the pixel perfect technique. In this case, I will try the best approach.
-- The filter button at the right of language is quite not defined in what should show inside there, I will define that as a modal prompt displaying current filters allowing to remove them.
-- It is missing some information in the course status (for the “All-Active-Completed”). I define that Active refers to courses that have been started but not completed.
-- In the getCourses request, I will add the filter logic in an async function to represent what backed would do, with that I will be able to build filter feature
+- I thought of the dashboard as a module that will be consumed from a bigger web-app. Because of that, I will not be doing the part of the sidebar with routing to different pages.
+- Commonly I would have a Figma design (or a design in some similar platform) where I could get the exact colours, fonts and size for the design, so I could keep the pixel perfect technique. In this case, I tried to get as closer as I could to the design.
+- The filter button at the right of language is quite not defined in what should show inside there, I defined that as a modal prompt displaying current filters allowing to remove them. Also, display all the available languages.
+- It is missing some information in the course status (for the “All-Active-Completed”). I defined that Active refers to courses that have been started but not completed.
+- In the getCourses request, I will add the filter logic in an async function to represent what backed would do.
 - For text filter I will only look for matches in courses names.
 - On course detail it will be displayed the preview Image of the course and the list of the content.
-- The list of content would redirect to another page. That page will not be done as there is no definition.
+- The list of content would redirect to another page. That feature will not be done in this challenge
 
 ## Roadmap 
 Here you can see the [Roadmap](https://github.com/julian916/web-courses-dashboard/wiki/Roadmap) of the steps followed and the state of each
 
-## Design
-![Dashboard](assets/dashboard.png)
 ------
 
 # How to run this webapp
