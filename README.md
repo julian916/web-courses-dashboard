@@ -18,6 +18,9 @@ The idea is to develop a dashboard from a design, while using good practices lik
 ## Roadmap 
 Here you can see the [Roadmap](https://github.com/julian916/web-courses-dashboard/wiki/Roadmap) of the steps followed and the state of each
 
+# Live Demo
+[Demo](https://julian916.github.io/web-courses-dashboard)
+
 ------
 
 # How to run this webapp
