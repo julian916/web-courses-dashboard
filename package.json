@@ -1,8 +1,8 @@
 {
-  "name": "web-app-typescript",
+  "name": "web-courses-dashboard",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://julian916.github.io/web-app-typescript",
+  "homepage": "https://julian916.github.io/web-courses-dashboard",
   "dependencies": {
     "@types/jest": "^27.5.2",
     "@types/node": "^16.11.59",
