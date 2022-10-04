@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/web-app-typescript/static/css/main.4ea24607.css",
-    "main.js": "/web-app-typescript/static/js/main.ae08242b.js",
-    "static/js/787.4d0be6f3.chunk.js": "/web-app-typescript/static/js/787.4d0be6f3.chunk.js",
-    "index.html": "/web-app-typescript/index.html",
-    "main.4ea24607.css.map": "/web-app-typescript/static/css/main.4ea24607.css.map",
-    "main.ae08242b.js.map": "/web-app-typescript/static/js/main.ae08242b.js.map",
-    "787.4d0be6f3.chunk.js.map": "/web-app-typescript/static/js/787.4d0be6f3.chunk.js.map"
+    "main.css": "/web-courses-dashboard/static/css/main.4ea24607.css",
+    "main.js": "/web-courses-dashboard/static/js/main.55695dfa.js",
+    "static/js/787.f4d0697b.chunk.js": "/web-courses-dashboard/static/js/787.f4d0697b.chunk.js",
+    "index.html": "/web-courses-dashboard/index.html",
+    "main.4ea24607.css.map": "/web-courses-dashboard/static/css/main.4ea24607.css.map",
+    "main.55695dfa.js.map": "/web-courses-dashboard/static/js/main.55695dfa.js.map",
+    "787.f4d0697b.chunk.js.map": "/web-courses-dashboard/static/js/787.f4d0697b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4ea24607.css",
-    "static/js/main.ae08242b.js"
+    "static/js/main.55695dfa.js"
   ]
 }
